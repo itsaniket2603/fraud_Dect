@@ -1,0 +1,62 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Credit Card Fraud Detection</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background-image: 
+                {% comment %} //url("{% static 'images/background1.avif' %}"), {% endcomment %}
+                url("{% static 'images/background2.avif' %}");
+            background-size: cover, 300px;  /* First image full, second image fixed size */
+            background-position: center, bottom right;
+            background-repeat: no-repeat, no-repeat;
+            background-attachment: fixed, scroll;
+            font-family: Arial, sans-serif;
+            color: white;
+            text-align: center;
+        }
+
+        .container {
+            background-color: rgba(0, 0, 0, 0.6);
+            padding: 50px;
+            margin: 80px auto;
+            width: 80%;
+            border-radius: 15px;
+        }
+
+        img.credit {
+            width: 300px;
+            margin-top: 20px;
+            border-radius: 10px;
+        }
+
+        .predict-btn {
+            display: inline-block;
+            margin-top: 30px;
+            padding: 10px 25px;
+            background-color: #00cc99;
+            color: white;
+            text-decoration: none;
+            border-radius: 8px;
+            font-size: 18px;
+        }
+
+        .predict-btn:hover {
+            background-color: #009977;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Welcome to Credit Card Fraud Detection</h1>
+        <p>Ensure safe transactions with our AI-powered fraud prediction system.</p>
+        <img class="credit" src="{% static 'images/creditcard.avif' %}" alt="Credit Card Image">
+        <br>
+        <a href="{% url 'predict' %}" class="predict-btn">Go to Prediction</a>
+    </div>
+</body>
+</html>

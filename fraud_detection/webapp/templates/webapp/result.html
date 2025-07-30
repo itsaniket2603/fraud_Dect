@@ -1,0 +1,48 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Prediction Result</title>
+    <style>
+        body {
+            background-image: url("{% static 'images/background2.jpg' %}");
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            font-family: Arial, sans-serif;
+            color: white;
+            text-align: center;
+            padding-top: 150px;
+        }
+
+        .result-box {
+            background-color: rgba(0, 0, 0, 0.7);
+            display: inline-block;
+            padding: 40px;
+            border-radius: 20px;
+            font-size: 28px;
+            color: #ffd700;
+        }
+
+        .back-link {
+            display: block;
+            margin-top: 30px;
+            font-size: 18px;
+            color: #00cc99;
+            text-decoration: none;
+        }
+
+        .back-link:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="result-box">
+        <strong>Prediction Result:</strong><br><br>
+        {{ result }}
+    </div>
+    <a href="{% url 'predict' %}" class="back-link">🔙 Back to Prediction</a>
+</body>
+</html>
