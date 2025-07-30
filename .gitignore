@@ -25,3 +25,4 @@ media/
 
 # Git
 .git/
+fraud_detection/webapp/model/creditcard.csv
